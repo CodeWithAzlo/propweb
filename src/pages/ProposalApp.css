@@ -1,0 +1,107 @@
+/* Import a custom font from Google Fonts or any other source */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap'); /* Example font */
+
+/* Container for the whole app */
+.proposalApp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f4f8; /* Light background color */
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Content inside the popup */
+.popup-content {
+    background-color: #ffffff; /* White background */
+    border-radius: 12px; /* Rounded corners */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Slightly larger shadow for a soft effect */
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+/* Header styling */
+.popup-content h1 {
+    font-size: 26px; /* Slightly larger font size */
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+    font-weight: 500; /* Semi-bold font weight */
+}
+
+/* Button group styling */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Button styling */
+.btn {
+    border: none;
+    border-radius: 6px; /* Slightly larger border-radius for a rounded effect */
+    padding: 12px 24px; /* Larger padding for buttons */
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    min-width: 120px; /* Minimum width for buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for a lifted effect */
+    font-family: 'Roboto', sans-serif; /* Apply the custom font */
+}
+
+/* Yes button styling */
+.yes-btn {
+    background-color: #28a745; /* Green */
+}
+
+.yes-btn:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* No button styling */
+.no-btn {
+    background-color: #dc3545; /* Red */
+}
+
+.no-btn:hover {
+    background-color: #c82333; /* Darker red */
+}
+
+/* Hide the No button on hover */
+.no-btn:hover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    .popup-content {
+        width: 95%;
+        padding: 15px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
